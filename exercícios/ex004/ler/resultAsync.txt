@@ -1,0 +1,3 @@
+Aqui está o resulto assincrono hahaha:
+ Seja bem vindo, essa é a escrita presente no primeiro arquivo! 
+ Seja bem vindo, essa é a escrita presente no segundo arquivo!
