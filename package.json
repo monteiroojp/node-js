@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node exercícios/ex005/package.js",
-    "dev": "nodemon exercícios/ex005/package.js"
+    "start": "node exercícios/ex007/httpHeader.js",
+    "dev": "nodemon exercícios/ex007/httpHeader.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
