@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node exercícios/ex008/middleware.js",
-    "dev": "nodemon exercícios/ex008/middleware.js"
+    "start": "node exercícios/ex008/methods.js",
+    "dev": "nodemon exercícios/ex008/methods.js"
   },
   "keywords": [],
   "author": "",
