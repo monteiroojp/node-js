@@ -16,7 +16,7 @@ const authorize = (req, res, next) =>{
 const checkPeopleForm = (req,res, next) =>{
     console.log(req.body)
     if(!req.body.name){
-        res.status(401).send('Please, fill the credencials')
+        res.status(401).json({sucsses: false, dataName: 'none'})
     }
     else{
         people.push({id: people.length + 1, name: req.body.name})
