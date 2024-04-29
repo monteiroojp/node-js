@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node exercícios/ex008/methods.js",
-    "dev": "nodemon exercícios/ex008/methods.js"
+    "start": "node projetos/taskApp/app.js",
+    "dev": "nodemon projetos/taskApp/app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "nodemon": "^3.1.0"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2"
   }
 }
