@@ -18,10 +18,11 @@ app.use('/api/v1/tasks', taskRoute)
 
 
 //Start setup
+require('dotenv').config()
 const connectDB = require('./dataBase/connect.js')
 const start = async () => {
     try {
-        await connectDB()
+        await connectDB(process.env.MONGO_URI)
         app.listen(port, () => {console.log(`The server is running on port: ${port}`)})
     } catch (error) {
         console.log(error)
