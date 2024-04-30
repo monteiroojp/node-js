@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node projetos/taskApp/app.js",
-    "dev": "nodemon projetos/taskApp/app.js"
+    "start": "node projetos/storeAPI/app.js",
+    "dev": "nodemon projetos/storeAPI/app.js"
   },
   "keywords": [],
   "author": "",
