@@ -7,7 +7,7 @@ const schema = mongoose.Schema({
     },
     rating: {
         type: Number,
-        required: [true, 'Must provide a rating'],
+        default: 0.0,
     },
     name: {
         type: String,
@@ -17,13 +17,21 @@ const schema = mongoose.Schema({
     },
     price: {
         type: Number,
-        required: [true, 'Must provide a price']
+        required: [true, 'Must provide a name']
     },
     company: {
         type: String,
         required: [true, 'Must provide a company name'],
         trim: true,
-        maxLength: [20, 'Max length is 20 chars']
+        maxLength: [20, 'Max length is 20 chars'],
+        enum: {
+            values: ['kabum', 'pichau', 'amazon'],
+            message: '{VALUE} não é aceito como nome de compania'
+        }
+    },
+    createdAt: {
+        type:Date,
+        default: Date.now()
     }
 })
 
