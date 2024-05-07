@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node projetos/storeAPI/app.js",
-    "dev": "nodemon projetos/storeAPI/app.js"
+    "start": "node projetos/JWTBasics/app.js",
+    "dev": "nodemon projetos/JWTBasics/app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,8 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.2"
   }
 }

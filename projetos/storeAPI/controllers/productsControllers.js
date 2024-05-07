@@ -15,6 +15,10 @@ const getAllProducts =  asyncWrapper(async (req, res) => {
         queryObject.name = {$regex: name, $options: 'i'}
     }
 
+    queryObject.price = {
+        $lt: 100
+    }
+
     let result = Product.find(queryObject)
 
     if(sort){
@@ -33,6 +37,8 @@ const getAllProducts =  asyncWrapper(async (req, res) => {
 
     result = result.limit(limit).skip(skip)
     console.log(skip)
+
+    
     
 
     console.log(queryObject)
