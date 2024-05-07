@@ -26,11 +26,18 @@ const getAllProducts =  asyncWrapper(async (req, res) => {
         const selectList = select.split(',').join(' ')
         result = result.select(selectList)
     }
- 
+    
+    const page = Number(req.query.page) || 1
+    const limit = Number(req.query.limit) || 2
+    const skip = (page - 1) * limit
+
+    result = result.limit(limit).skip(skip)
+    console.log(skip)
+    
 
     console.log(queryObject)
     const products = await result
-    res.status(200).json({products})
+    res.status(200).json({products: products, totalProducts: products.length})
 })
 
 //Create Product
