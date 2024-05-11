@@ -12,9 +12,12 @@ const jobRouter = require('./routes/jobs')
 const connectDB = require('./db/connect')
 app.use(express.json());
 
+//Auth
+const authenticateToken = require('./middleware/authentication')
+
 //Routers
 app.use('/api/v1/auth', authrouter)
-app.use('/api/v1/jobs', jobRouter)
+app.use('/api/v1/jobs', authenticateToken ,jobRouter)
 
 // error handler
 const notFoundMiddleware = require('./middleware/not-found');

@@ -19,3 +19,5 @@ const authenticateToken = (req, res, next) => {
         throw new UnauthenticatedError('Token is not valid!')
     }
 }
+
+module.exports = authenticateToken
