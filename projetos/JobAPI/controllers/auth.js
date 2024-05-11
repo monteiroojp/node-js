@@ -28,6 +28,13 @@ const login = async (req, res) => {
     }
 
     const token = user.createToken()
+
+    const isValidPassword = await user.verifyPassword(password)
+    
+    if(!isValidPassword){
+        throw new UnauthenticatedError('Invalid credentials')
+    }
+
     res.status(StatusCodes.OK).json({user: {name: user.name}, token: token})
 }
 
