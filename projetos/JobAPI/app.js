@@ -2,6 +2,7 @@ require('dotenv').config();
 require('express-async-errors');
 const express = require('express');
 const app = express();
+const authenticateToken = require('./middleware/authentication')
 
 
 const authrouter = require('./routes/auth')
@@ -13,7 +14,7 @@ const connectDB = require('./db/connect')
 app.use(express.json());
 
 //Auth
-const authenticateToken = require('./middleware/authentication')
+
 
 //Routers
 app.use('/api/v1/auth', authrouter)
