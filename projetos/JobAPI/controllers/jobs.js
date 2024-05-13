@@ -2,8 +2,9 @@
 const Job = require('../models/Job')
 const {StatusCodes} = require('http-status-codes')
 
-const getAllJobs = (req, res) => {
-    res.send('getting all jobs')
+const getAllJobs = async (req, res) => {
+    const job = await Job.find({createdBy: req.user.userID}).sort('-createdAt')
+    res.status(StatusCodes.OK).json({jobs: job, totalJobs: job.length})
 }
 
 const getSingleJob = (req, res) => {
